@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.jamesgu.cc</id>
     <title>James Gu</title>
-    <updated>2020-05-29T06:29:46.856Z</updated>
+    <updated>2020-05-29T06:41:36.826Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.jamesgu.cc"/>
     <link rel="self" href="https://www.jamesgu.cc/atom.xml"/>
@@ -23,7 +23,7 @@
 <pre><code class="language-shell">1) 011c945f30ce2cbafc452f39840f025693339c42 &quot;iPhone Developer: san zhang (BE7KI9OI9K)&quot;
 2) 815234e8963a1a810a2509a485a1c62fac2182c8 &quot;iPhone Developer: san zhang (89K23U43HU)&quot;
 </code></pre>
-<p>输出格式为：<code>证书SHA1 &quot;证书类型: 拥有者 (团队id)&quot;</code></p>
+<p>输出格式为：<code>序号 证书SHA1 &quot;证书类型: 拥有者 (团队id)&quot;</code></p>
 <h2 id="framework重签">Framework重签</h2>
 <pre><code class="language-shell">codesign -fs &quot;iPhone Developer: san zhang (89K23U43HU)&quot; xx.framework
 </code></pre>

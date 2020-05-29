@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>【iOS】重签 Framework | James Gu</title>
-<link rel="shortcut icon" href="https://www.jamesgu.cc/favicon.ico?v=1590733783317">
+<link rel="shortcut icon" href="https://www.jamesgu.cc/favicon.ico?v=1590734493926">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://www.jamesgu.cc/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="【iOS】重签 Framework | James Gu - Atom Feed" href="https://www.jamesgu.cc/atom.xml">
@@ -25,7 +25,7 @@ security find-identity -v -p codesigning
       <div class="main-content">
         <div class="site-header">
   <a href="https://www.jamesgu.cc">
-  <img class="avatar" src="https://www.jamesgu.cc/images/avatar.png?v=1590733783317" alt="">
+  <img class="avatar" src="https://www.jamesgu.cc/images/avatar.png?v=1590734493926" alt="">
   </a>
   <h1 class="site-title">
     James Gu
@@ -103,7 +103,7 @@ security find-identity -v -p codesigning
 <pre><code class="language-shell">1) 011c945f30ce2cbafc452f39840f025693339c42 &quot;iPhone Developer: san zhang (BE7KI9OI9K)&quot;
 2) 815234e8963a1a810a2509a485a1c62fac2182c8 &quot;iPhone Developer: san zhang (89K23U43HU)&quot;
 </code></pre>
-<p>输出格式为：<code>证书SHA1 &quot;证书类型: 拥有者 (团队id)&quot;</code></p>
+<p>输出格式为：<code>序号 证书SHA1 &quot;证书类型: 拥有者 (团队id)&quot;</code></p>
 <h2 id="framework重签">Framework重签</h2>
 <pre><code class="language-shell">codesign -fs &quot;iPhone Developer: san zhang (89K23U43HU)&quot; xx.framework
 </code></pre>
