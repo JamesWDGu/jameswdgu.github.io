@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.jamesgu.cc</id>
     <title>James Gu</title>
-    <updated>2020-04-28T03:03:23.368Z</updated>
+    <updated>2020-05-29T06:28:54.752Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.jamesgu.cc"/>
     <link rel="self" href="https://www.jamesgu.cc/atom.xml"/>
@@ -11,35 +11,34 @@
     <icon>https://www.jamesgu.cc/favicon.ico</icon>
     <rights>All rights reserved 2020, James Gu</rights>
     <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://www.jamesgu.cc/hello-gridea/</id>
-        <link href="https://www.jamesgu.cc/hello-gridea/">
+        <title type="html"><![CDATA[【iOS】重签 Framework]]></title>
+        <id>https://www.jamesgu.cc/XdKV8YO3q/</id>
+        <link href="https://www.jamesgu.cc/XdKV8YO3q/">
         </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+        <updated>2020-05-29T02:45:30.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="查询可用于重签的证书">查询可用于重签的证书</h2>
+<pre><code class="language-shell">security find-identity -v -p codesigning
+</code></pre>
+<p>结果</p>
+<pre><code class="language-log">1) 011c945f30ce2cbafc452f39840f025693339c42 &quot;iPhone Developer: san zhang (BE7KI9OI9K)&quot;
+2) 815234e8963a1a810a2509a485a1c62fac2182c8 &quot;iPhone Developer: san zhang (89K23U43HU)&quot;
+</code></pre>
+<p>输出格式为：<code>证书SHA1 &quot;证书类型: 拥有者 (团队id)&quot;</code></p>
+<h2 id="framework重签">Framework重签</h2>
+<pre><code class="language-shell">codesign -fs &quot;iPhone Developer: san zhang (89K23U43HU)&quot; xx.framework
+</code></pre>
+<h2 id="framework批量重签">Framework批量重签</h2>
+<pre><code class="language-shell">#!/bin/bash
+
+CERT_NAME=&quot;iPhone Developer: san zhang (89K23U43HU)&quot;
+DIR=&quot;~/project/embedded/framewrok/&quot;
+
+cd $DIR
+for i in *.framework; do
+    codesign -fs ${cert_name} ${i}
+done
+exit
+</code></pre>
 ]]></content>
     </entry>
 </feed>

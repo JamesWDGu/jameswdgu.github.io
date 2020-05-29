@@ -2,24 +2,21 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>关于 | James Gu</title>
+<title>【iOS】重签 Framework | James Gu</title>
 <link rel="shortcut icon" href="https://www.jamesgu.cc/favicon.ico?v=1590733732169">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://www.jamesgu.cc/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="关于 | James Gu - Atom Feed" href="https://www.jamesgu.cc/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="【iOS】重签 Framework | James Gu - Atom Feed" href="https://www.jamesgu.cc/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="
-欢迎来到我的小站呀，很高兴遇见你！🤝
+    <meta name="description" content="查询可用于重签的证书
+security find-identity -v -p codesigning
 
-🏠 关于本站
-👨‍💻 博主是谁
-⛹ 兴趣爱好
-📬 联系我呀
-..." />
-    <meta name="keywords" content="" />
+结果
+1) 011c945f30ce2cbafc452f39840f025693339c42 &quot;iPhone Develop..." />
+    <meta name="keywords" content="iOS" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -81,37 +78,56 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              关于
+              【iOS】重签 Framework
             </h2>
             <div class="post-info">
               <span>
-                2019-01-25
+                2020-05-29
               </span>
               <span>
                 1 min read
               </span>
               
+                <a href="https://www.jamesgu.cc/Kk-o2y7sY/" class="post-tag">
+                  # iOS
+                </a>
+              
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<h2 id="联系我呀">📬 联系我呀</h2>
+                <h2 id="查询可用于重签的证书">查询可用于重签的证书</h2>
+<pre><code class="language-shell">security find-identity -v -p codesigning
+</code></pre>
+<p>结果</p>
+<pre><code class="language-log">1) 011c945f30ce2cbafc452f39840f025693339c42 &quot;iPhone Developer: san zhang (BE7KI9OI9K)&quot;
+2) 815234e8963a1a810a2509a485a1c62fac2182c8 &quot;iPhone Developer: san zhang (89K23U43HU)&quot;
+</code></pre>
+<p>输出格式为：<code>证书SHA1 &quot;证书类型: 拥有者 (团队id)&quot;</code></p>
+<h2 id="framework重签">Framework重签</h2>
+<pre><code class="language-shell">codesign -fs &quot;iPhone Developer: san zhang (89K23U43HU)&quot; xx.framework
+</code></pre>
+<h2 id="framework批量重签">Framework批量重签</h2>
+<pre><code class="language-shell">#!/bin/bash
+
+CERT_NAME=&quot;iPhone Developer: san zhang (89K23U43HU)&quot;
+DIR=&quot;~/project/embedded/framewrok/&quot;
+
+cd $DIR
+for i in *.framework; do
+    codesign -fs ${cert_name} ${i}
+done
+exit
+</code></pre>
 
               </div>
               <div class="toc-container">
                 <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99">🏠 关于本站</a></li>
-<li><a href="#%E5%8D%9A%E4%B8%BB%E6%98%AF%E8%B0%81">👨‍💻 博主是谁</a></li>
-<li><a href="#%E5%85%B4%E8%B6%A3%E7%88%B1%E5%A5%BD">⛹ 兴趣爱好</a></li>
-<li><a href="#%E8%81%94%E7%B3%BB%E6%88%91%E5%91%80">📬 联系我呀</a></li>
+<li><a href="#%E6%9F%A5%E8%AF%A2%E5%8F%AF%E7%94%A8%E4%BA%8E%E9%87%8D%E7%AD%BE%E7%9A%84%E8%AF%81%E4%B9%A6">查询可用于重签的证书</a></li>
+<li><a href="#framework%E9%87%8D%E7%AD%BE">Framework重签</a></li>
+<li><a href="#framework%E6%89%B9%E9%87%8F%E9%87%8D%E7%AD%BE">Framework批量重签</a></li>
 </ul>
 </li>
 </ul>
