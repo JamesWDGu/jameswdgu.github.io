@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.jamesgu.cc</id>
-    <title>James Gu</title>
-    <updated>2020-05-29T06:43:45.261Z</updated>
+    <title>Gu&apos;s Coding Life</title>
+    <updated>2020-06-03T03:01:21.641Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.jamesgu.cc"/>
     <link rel="self" href="https://www.jamesgu.cc/atom.xml"/>
     <subtitle>喵呜🐱～～</subtitle>
     <logo>https://www.jamesgu.cc/images/avatar.png</logo>
     <icon>https://www.jamesgu.cc/favicon.ico</icon>
-    <rights>All rights reserved 2020, James Gu</rights>
+    <rights>All rights reserved 2020, Gu&apos;s Coding Life</rights>
     <entry>
         <title type="html"><![CDATA[【iOS】重签 Framework]]></title>
         <id>https://www.jamesgu.cc/XdKV8YO3q/</id>
