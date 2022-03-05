@@ -1,36 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://www.jamesgu.cc</id>
-    <title>Gu&apos;s Coding Life</title>
-    <updated>2020-06-03T03:26:40.906Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://www.jamesgu.cc"/>
-    <link rel="self" href="https://www.jamesgu.cc/atom.xml"/>
-    <subtitle>喵呜🐱～～</subtitle>
-    <logo>https://www.jamesgu.cc/images/avatar.png</logo>
-    <icon>https://www.jamesgu.cc/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gu&apos;s Coding Life</rights>
-    <entry>
-        <title type="html"><![CDATA[【iOS】重签 Framework]]></title>
-        <id>https://www.jamesgu.cc/XdKV8YO3q/</id>
-        <link href="https://www.jamesgu.cc/XdKV8YO3q/">
-        </link>
-        <updated>2020-05-29T02:45:30.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="查询可用于重签的证书">查询可用于重签的证书</h2>
-<pre><code class="language-shell">security find-identity -v -p codesigning
+
+  <title><![CDATA[JamesGu]]></title>
+  <link href="https://jamesgu.cc/atom.xml" rel="self"/>
+  <link href="https://jamesgu.cc/"/>
+  <updated>2022-03-05T17:21:55+08:00</updated>
+  <id>https://jamesgu.cc/</id>
+  <author>
+    <name><![CDATA[JamesGu]]></name>
+    
+  </author>
+  <generator uri="http://www.coderforart.com/">CoderForArt</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[【iOS】重签 Framework]]></title>
+    <link href="https://jamesgu.cc/16464699753540.html"/>
+    <meta name="description" content="JamesGu" /><author><name><![CDATA[JamesGu]]></name></author>
+    <updated>2022-03-05T16:46:15+08:00</updated>
+    <id>https://jamesgu.cc/16464699753540.html</id>
+    <content type="html"><![CDATA[
+    <img src="" />
+<h2><a id="%E6%9F%A5%E8%AF%A2%E5%8F%AF%E7%94%A8%E4%BA%8E%E9%87%8D%E7%AD%BE%E7%9A%84%E8%AF%81%E4%B9%A6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>查询可用于重签的证书</h2>
+<pre class="line-numbers"><code class="language-shell">security find-identity -v -p codesigning
 </code></pre>
 <p>结果</p>
-<pre><code class="language-shell">1) 011c945f30ce2cbafc452f39840f025693339c42 &quot;iPhone Developer: san zhang (BE7KI9OI9K)&quot;
-2) 815234e8963a1a810a2509a485a1c62fac2182c8 &quot;iPhone Developer: san zhang (89K23U43HU)&quot;
+<pre class="line-numbers"><code class="language-shell">1) 011c945f30ce2cbafc452f39840f025693339c42 &quot;iPhone Developer: san zhang (BE7XXXXXXX)&quot;
+2) 815234e8963a1a810a2509a485a1c62fac2182c8 &quot;iPhone Developer: san zhang (89KYYYYYYY)&quot;
 </code></pre>
 <p>输出格式为：<code>序号 证书SHA1 &quot;证书类型: 拥有者 (团队id)&quot;</code></p>
-<h2 id="framework重签">Framework重签</h2>
-<pre><code class="language-shell">codesign -fs &quot;iPhone Developer: san zhang (89K23U43HU)&quot; xx.framework
+<h2><a id="framework%E9%87%8D%E7%AD%BE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Framework重签</h2>
+<pre class="line-numbers"><code class="language-shell">codesign -fs &quot;iPhone Developer: san zhang (89KYYYYYYY)&quot; xx.framework
 </code></pre>
-<h2 id="framework批量重签">Framework批量重签</h2>
-<pre><code class="language-shell">#!/bin/bash
+<h2><a id="framework%E6%89%B9%E9%87%8F%E9%87%8D%E7%AD%BE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Framework批量重签</h2>
+<pre class="line-numbers"><code class="language-shell">#!/bin/bash
 
-CERT_NAME=&quot;iPhone Developer: san zhang (89K23U43HU)&quot;
+CERT_NAME=&quot;iPhone Developer: san zhang (89KYYYYYYY)&quot;
 DIR=&quot;~/project/embedded/framewrok/&quot;
 
 cd $DIR
@@ -39,6 +44,8 @@ for i in *.framework; do
 done
 exit
 </code></pre>
+
 ]]></content>
-    </entry>
+  </entry>
+  
 </feed>
