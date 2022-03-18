@@ -4,7 +4,7 @@
   <title><![CDATA[JamesGu]]></title>
   <link href="https://www.jamesgu.cc/atom.xml" rel="self"/>
   <link href="https://www.jamesgu.cc/"/>
-  <updated>2022-03-05T17:40:32+08:00</updated>
+  <updated>2022-03-18T17:30:46+08:00</updated>
   <id>https://www.jamesgu.cc/</id>
   <author>
     <name><![CDATA[JamesGu]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://www.coderforart.com/">CoderForArt</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Apple Watch 无法解锁 Mac]]></title>
+    <link href="https://www.jamesgu.cc/16475957150468.html"/>
+    <meta name="description" content="JamesGu" /><author><name><![CDATA[JamesGu]]></name></author>
+    <updated>2022-03-18T17:28:35+08:00</updated>
+    <id>https://www.jamesgu.cc/16475957150468.html</id>
+    <content type="html"><![CDATA[
+    <img src="" />
+<p>1 、在“钥匙串访问 app”里选“显示”--&gt; “显示不可见项”；搜索“Auto Unlock”，全删；再搜索“AutoUnlock”（没空格的），全删（会自动生成 4 项）；<br />
+2 、~/Library/Sharing/AutoUnlock/，删除里面的两个文件；<br />
+3 、现在去打开 Apple Watch 解锁 Mac ，两次，第一次可能还会提示失败。</p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[【iOS】重签 Framework]]></title>
