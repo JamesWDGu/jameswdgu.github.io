@@ -4,7 +4,7 @@
   <title><![CDATA[JamesGu]]></title>
   <link href="https://www.jamesgu.cc/atom.xml" rel="self"/>
   <link href="https://www.jamesgu.cc/"/>
-  <updated>2022-03-18T17:49:30+08:00</updated>
+  <updated>2022-03-18T21:57:32+08:00</updated>
   <id>https://www.jamesgu.cc/</id>
   <author>
     <name><![CDATA[JamesGu]]></name>
@@ -12,6 +12,24 @@
   </author>
   <generator uri="http://www.coderforart.com/">CoderForArt</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mac 常用开发软件]]></title>
+    <link href="https://www.jamesgu.cc/16476113656223.html"/>
+    <meta name="description" content="JamesGu" /><author><name><![CDATA[JamesGu]]></name></author>
+    <updated>2022-03-18T21:49:25+08:00</updated>
+    <id>https://www.jamesgu.cc/16476113656223.html</id>
+    <content type="html"><![CDATA[
+    <img src="" />
+<ol>
+<li>查看 Android keystore ：<a href="https://keystore-explorer.org/index.html">keystore-explorer</a></li>
+<li>iOS 重签工具：<a href="https://www.iosappsigner.com/">iOS App Signer</a></li>
+<li>编辑 Plist 文件，编译后也支持（收费、可试用）：<a href="https://www.fatcatsoftware.com/plisteditpro/">Plist Edit Pro</a></li>
+<li>iPA Quicklook：<a href="https://github.com/ealeksandrov/ProvisionQL">ProvisionQL</a></li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Apple Watch 无法解锁 Mac]]></title>
