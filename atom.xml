@@ -4,7 +4,7 @@
   <title><![CDATA[JamesGu]]></title>
   <link href="https://www.jamesgu.cc/atom.xml" rel="self"/>
   <link href="https://www.jamesgu.cc/"/>
-  <updated>2022-03-18T17:30:46+08:00</updated>
+  <updated>2022-03-18T17:36:28+08:00</updated>
   <id>https://www.jamesgu.cc/</id>
   <author>
     <name><![CDATA[JamesGu]]></name>
@@ -21,9 +21,10 @@
     <id>https://www.jamesgu.cc/16475957150468.html</id>
     <content type="html"><![CDATA[
     <img src="" />
-<p>1 、在“钥匙串访问 app”里选“显示”--&gt; “显示不可见项”；搜索“Auto Unlock”，全删；再搜索“AutoUnlock”（没空格的），全删（会自动生成 4 项）；<br />
-2 、~/Library/Sharing/AutoUnlock/，删除里面的两个文件；<br />
-3 、现在去打开 Apple Watch 解锁 Mac ，两次，第一次可能还会提示失败。</p>
+<p><a href="https://www.v2ex.com/t/841211">原文：https://www.v2ex.com/t/841211</a></p>
+<p>1 、在&quot;钥匙串访问 app”里选“显示&quot; --&gt; &quot;显示不可见项&quot;. 搜索&quot;Auto Unlock&quot;,全删. 再搜索&quot;AutoUnlock&quot;(没空格的), 全删(会自动生成 4 项).<br />
+2 、<code>~/Library/Sharing/AutoUnlock/</code>, 删除里面的两个文件.<br />
+3 、现在去打开 Apple Watch 解锁 Mac, 两次, 第一次可能还会提示失败.</p>
 
 ]]></content>
   </entry>
